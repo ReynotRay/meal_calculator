@@ -38,7 +38,7 @@ img:hover{
     text-align: center;
     margin-top: -5px;
     border: lightgrey solid 1px;
-      box-shadow: 3px 3px 5px #888888;
+    box-shadow: 3px 3px 5px #888888;
 }
 
 .column1{
@@ -124,7 +124,7 @@ img:hover{
 
 .dropdown-content {
     display: none;
-        margin-left: -26px;
+    margin-left: -26px;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 120px;
