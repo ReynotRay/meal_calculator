@@ -10,9 +10,10 @@ var prices = {
 	fries:[' $1.95'],
 	clubwrap:[' $2.95'],
 	baconburger:[' $3.95'],
-	chilidog:[' 3.95'],
-	turkeysandwich:[' 9.95'],
-	pizza:[' 8.00']
+	chilidog:[' $3.95'],
+	turkeysandwich:[' $9.95'],
+	pizza:[' $8.00'],
+  veggiesandwich:[' $9.95']
 };
 
 
@@ -24,7 +25,7 @@ var prices = {
 	    $('#order').append($(this).text());
 	    console.log($(this).text());
 	// checkValue();
-
+  //function checkValue(){}
 	//for (var i = 0;i <= 4; i++){
 	
    if (($(this).text())=== "Hamburger"){
@@ -35,7 +36,7 @@ var prices = {
    	$('#order').append(prices.hotdog);
    	$('#order').append('<br>');
    }
-    if (($(this).text())=== "Chickenburger"){
+    if (($(this).text())=== "Chicken Burger"){
    	$('#order').append(prices.chickenburger);
    	$('#order').append('<br>');
    }
@@ -58,6 +59,26 @@ var prices = {
    if (($(this).text())=== "Bacon Burger"){
    	$('#order').append(prices.baconburger);
    	$('#order').append('<br>');
+   }
+   if (($(this).text())=== "Club Wrap"){
+    $('#order').append(prices.clubwrap);
+    $('#order').append('<br>');
+   }
+   if (($(this).text())=== "Chili Dog"){
+    $('#order').append(prices.chilidog);
+    $('#order').append('<br>');
+   }
+   if (($(this).text())=== "Turkey Sandwich"){
+    $('#order').append(prices.turkeysandwich);
+    $('#order').append('<br>');
+   }
+   if (($(this).text())=== "Pizza"){
+    $('#order').append(prices.pizza);
+    $('#order').append('<br>');
+   }
+    if (($(this).text())=== "Veggie Sandwich"){
+    $('#order').append(prices.veggiesandwich);
+    $('#order').append('<br>');
    }
 	else {
 		console.log('nope');
