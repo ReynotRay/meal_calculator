@@ -5,6 +5,8 @@
 	<title>Meal tracker</title>
 	 <link href="css/normalize.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	 <link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet">
 </head>
 <body>
 <h1>Meal Calculator</h1>
@@ -27,7 +29,14 @@
 <div class="menu" id="turkey-sandwich"><img src="assets/turkeysandwich.jpeg"><div class="caption">Turkey Sandwich</div></div>
 <div class="menu" id="pizza"><img src="assets/pizza.jpeg"><div class="caption">Pizza</div></div>
 </div>
-<div class="sale"><p id="sale">No Sale</p></div>
+<div class="sale"><p id="nosale">No Sale</p>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#" id="remove">Clear Items</a>
+    <a href="#">Split Bill</a>
+  </div>
+</div></div>
 <div class="items"><p id="order"></p></div>
 <div class="charge">Charge $0.00</div>
 </div>

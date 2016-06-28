@@ -16,49 +16,52 @@ var prices = {
 };
 
 
-
+//when user clicks on item it will add it to items list
 $(".menu").click(function() {
-
-//var Hamburger = ('7.00');
-
-   $('.items p').append($(this).text()); 
-    $('.items p').append('<br>');
-   console.log(this.text);
+   $('#order').append($(this).text()); 
+    $('#order').append('<br>');
    checkItems();
 });
 
 function checkItems () {
 	console.log('before');
-	var string = document.getElementById('#order').value;
-	alert(string);
-// 	if(document.getElementById("p"). === "Hamburger"){
-// 	console.log('almost');
-// }
-// else {
-// 	console.log('error');
-// }
+	var order = $('#order').text();
+	console.log(order);
 
+if (order === "Hamburger"){
+	console.log("maybe");
+	// $('#order').append(prices{hamburger:['']});
 }
-// var t = document.getElementById('superman').value;
-// alert(t); }
-//     if ('.items'.value == 'Hamburger'){
-//     		console.log('somewhat');
-//     	}
-//     	else{
-//     		console.log('error');
-//     	}
-//     $('.items p').append('<br>');
-// console.log('.items p'.value);
-// });
+else {console.log('nope');
+}
+}
 
-// if ('items p'.value === "hamburger"){
-// console.log('699');
-//}
+ls
 
-// $('.menu').click(function(){
-// 	console.log('clicks');
-//     var values = $('.items p').val().split(' ');
-//     values.push($(this).html());
-//     $('.items p').val(values.join(' '));
-//     return false;
-// });
+//remove dinner items from items div
+$( "#remove" ).click(function() {
+  $( "#order" ).empty();
+  $('#nosale').text('No Sale');
+
+});
+
+
+
+
+//when mouse enter arrow display items
+$(".dropdown").mouseenter(function() {
+  $('.dropdown-content').fadeIn();
+});
+
+$(".dropdown").mouseleave(function() {
+  $('.dropdown-content').fadeOut();
+});
+
+//when there is input of item display Current sale
+$('.menu').click(function()	{
+	$('#nosale').text('Current Sale');
+
+});
+
+
+
