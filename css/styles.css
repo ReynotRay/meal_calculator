@@ -1,7 +1,7 @@
 body{
 	background-color: white;
 	// font-family: 'Lemonada', cursive;
-	font-family: times;
+	font-family: sans-serif;
 
 }
 .container {
@@ -140,11 +140,9 @@ img:hover{
 
 .dropdown-content a:hover {background-color: lightgrey}
 
-
-
-
-
-
+.items{
+    overflow-y: auto;
+}
 
 
 

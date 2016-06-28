@@ -1,93 +1,48 @@
+var menuPrices = (function() {
+    var prices = {
+        "Hamburger": 6.95,
+        "Hot Dog": 2.95,
+        "Chicken Burger": 5.95,
+        "Veggie Sandwich": 4.95,
+        "Cheeseburger": 7.95,
+        "Bratwurst": 1.95,
+        "Fries": 1.95,
+        "Club Wrap": 2.95,
+        "Bacon Burger": 3.95,
+        "Chili Dog": 3.95,
+        "Turkey Sandwich": 9.95,
+        "Pizza": 8.00
+    };
+
+    return function(item) {
+        return prices[item];
+    }
+}());
 
 
-var prices = {
-	hamburger:[' $6.95'],
-	hotdog:[' $2.95'],
-	chickenburger:[' $5.95'],
-	veggie:[' $4.95'],
-	cheeseburger:[' $7.95'],
-	bratwurst:[' $1.95'],
-	fries:[' $1.95'],
-	clubwrap:[' $2.95'],
-	baconburger:[' $3.95'],
-	chilidog:[' $3.95'],
-	turkeysandwich:[' $9.95'],
-	pizza:[' $8.00'],
-  veggiesandwich:[' $9.95']
-};
+var totalPrice = (function() {
+    var total = 0;
+    return function(price) {
+        total = total + price;
+        return parseFloat(total).toFixed(2);
+    }
+}());
 
 
-//when user clicks on item it will add it to items list
-	$(".menu").click(function() {
-	//obtain value when clicked then run that value into prices
-	var userPick = ['hamburger','hotdog','chickenburger','veggie'];
-	var categories = ['hamburger','hotdog','chickenburger','veggie'];
-	    $('#order').append($(this).text());
-	    console.log($(this).text());
-	// checkValue();
-  //function checkValue(){}
-	//for (var i = 0;i <= 4; i++){
-	
-   if (($(this).text())=== "Hamburger"){
-   	$('#order').append(prices.hamburger);
-   	$('#order').append('<br>');
-   }
-   if (($(this).text())=== "Hot Dog"){
-   	$('#order').append(prices.hotdog);
-   	$('#order').append('<br>');
-   }
-    if (($(this).text())=== "Chicken Burger"){
-   	$('#order').append(prices.chickenburger);
-   	$('#order').append('<br>');
-   }
-    if (($(this).text())=== "Veggie"){
-   	$('#order').append(prices.veggie);
-   	$('#order').append('<br>');
-   }
-    if (($(this).text())=== "Cheeseburger"){
-   	$('#order').append(prices.cheeseburger);
-   	$('#order').append('<br>');
-   }
-    if (($(this).text())=== "Bratwurst"){
-   	$('#order').append(prices.bratwurst);
-   	$('#order').append('<br>');
-   }
-    if (($(this).text())=== "Fries"){
-   	$('#order').append(prices.fries);
-   	$('#order').append('<br>');
-   }
-   if (($(this).text())=== "Bacon Burger"){
-   	$('#order').append(prices.baconburger);
-   	$('#order').append('<br>');
-   }
-   if (($(this).text())=== "Club Wrap"){
-    $('#order').append(prices.clubwrap);
-    $('#order').append('<br>');
-   }
-   if (($(this).text())=== "Chili Dog"){
-    $('#order').append(prices.chilidog);
-    $('#order').append('<br>');
-   }
-   if (($(this).text())=== "Turkey Sandwich"){
-    $('#order').append(prices.turkeysandwich);
-    $('#order').append('<br>');
-   }
-   if (($(this).text())=== "Pizza"){
-    $('#order').append(prices.pizza);
-    $('#order').append('<br>');
-   }
-    if (($(this).text())=== "Veggie Sandwich"){
-    $('#order').append(prices.veggiesandwich);
-    $('#order').append('<br>');
-   }
-	else {
-		console.log('nope');
-   }
+$(".menu").click(function() {
+    $('#nosale').text('Current Sale');
+
+    if ($(this).text()) {
+        $('.charge').text('$' + totalPrice(menuPrices($(this).text())) + " ");
+        $('.items').append('<p><h4 class="item-name">' + $(this).text() + '</h4>' + '<span class="item-price">$ ' + menuPrices($(this).text()) + '</span></p>');
+    }
+
 });
 
 //remove dinner items from items div
 	$("#remove" ).click(function() {
-  	$( "#order" ).empty();
+  	$( ".items" ).empty();
+    //(totalPrice * 0);
   	$('#nosale').text('No Sale');
 
 });
