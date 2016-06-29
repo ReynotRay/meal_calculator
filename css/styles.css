@@ -17,10 +17,10 @@ h1{
 	text-align: center;
 }
 img {
-	width: 100px;
-	height: 78px;
+    width: 125px;
+    height: 91px;
 	border-radius: 5px 5px 0px 0px;
-	margin-top: 10px;
+	margin-top: 22px;
 	margin-left: 10px;
 	border:lightgrey solid 1px;
 	display: inline-block;
@@ -30,7 +30,7 @@ img:hover{
 	cursor: pointer;
 }
 .caption {
-	width: 100px;
+	width: 125px;
     font-size: 13px;
     background: white;
     border-radius: 0px 0px 5px 5px;
@@ -42,23 +42,23 @@ img:hover{
 }
 
 .column1{
-	margin-top: 12px;
-    margin-left: 17px;
+	margin-top: 5px;
+    margin-left: 13px;
 	width: 150px;
 	float: left;
 	
 }
 .column2{
-	margin-top: 12px;
+	margin-top: 5px;
 	width: 150px;
-	margin-left: -21px;
+	margin-left: 19px;
 	float: left;
 	
 }
 .column3 {
-	margin-top: 12px;
+	margin-top: 5px;
 	width: 150px;
-	margin-left: -19px;
+	margin-left: 19px;
 	float: left;
 	
 }
@@ -76,7 +76,7 @@ img:hover{
     background: #ff5959;
 }
 .items{
-    height: 260px;
+    height: 349px;
     width: 272px;
     background: white;
     margin-right: 30px;
@@ -115,6 +115,7 @@ img:hover{
 
 .dropbtn:hover, .dropbtn:focus {
     color:black;
+    cursor: pointer;
 }
 
 .dropdown {
