@@ -2,7 +2,8 @@ body{
 	background-color: white;
 	// font-family: 'Lemonada', cursive;
 	font-family: sans-serif;
-
+    //background: #f5f5dc;
+    background: #10113a;
 }
 .container {
     width: 914px;
@@ -15,6 +16,10 @@ body{
 }
 h1{
 	text-align: center;
+    color:white;
+}
+p{
+    display:inline-block;
 }
 img {
     width: 125px;
@@ -65,8 +70,8 @@ img:hover{
 	
 }
 
-.sale	{
-   width: 319px;
+.sale-area	{
+    width: 319px;
     height: 70px;
     text-align: center;
    color:white;
@@ -78,11 +83,12 @@ img:hover{
     background: #ff5959;
 }
 .items{
-    height: 349px;
-    width: 319px;
+    height: 354px;
     background: white;
-    margin-right: 30px;
-    float: right;
+    color: black;
+}
+#takeaway{
+    display: none;
 }
 .item-name{
  margin-left: 10px;
@@ -94,15 +100,13 @@ img:hover{
 .items p {
 	margin-left: 25px;
     line-height: 25px;
+    width: 233px;
 }
 .charge {
 	height: 87px;
-    width: 319px;
     background: white;
-    margin-right: 30px;
     text-align: center;
     line-height: 84px;
-    float: right;
     border-radius: 0px 0px 10px 10px;
     background:#2996cc;
     color: white;
@@ -118,7 +122,9 @@ img:hover{
     color: lightgrey;
     background-color: transparent;
     font-size: 35px;
+    position: absolute;
     cursor: pointer;
+    margin-top: -28px;
     border-color: transparent;
 }
 
@@ -128,11 +134,7 @@ img:hover{
 }
 
 .dropdown {
-	float: right;
-    position: relative;
     display: inline-block;
-    margin-top: -56px;
-    margin-right: 32px;
 }
 
 .dropdown-content {
@@ -161,10 +163,13 @@ img:hover{
     cursor: pointer;
 }
 .final-charge{
-    //display: none;
+
     background: yellow;
     height: 100px;
     width: 100px;
+}
+#back{
+    display:none;
 }
 
 

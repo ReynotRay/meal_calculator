@@ -20,7 +20,7 @@ var menuPrices = (function() {
     };
 }());
 
-
+console.log('fucks');
 var totalPrice = (function() {
     var total = 0;
     return function(price) {
@@ -29,23 +29,22 @@ var totalPrice = (function() {
     };
 }());
 
+//console.logp(rice);
 
 $(".menu").click(function() {
     $('#nosale').text('Current Sale');
 
     if ($(this).text()) {
         $('.charge').text('Charge $' + totalPrice(menuPrices($(this).text())) + " ");
-        $('.items').append('<p><h4 class="item-name">' + $(this).text() + '</h4>' + '<span class="item-price">$ ' 
-            + menuPrices($(this).text()) + '</span></p>');
+        $('.items').append('<p class="item-name">' + $(this).text()+ 
+            '<span class="item-price">$'+ menuPrices($(this).text()) + '<div id="takeaway">Xhere');
     }
 });
 
-$("#split").click(function() {
-    if ($(this).text()) {
-        console.log('clicked split');
-        $('.charge').text('Charge $' + totalPrice(menuPrices($(this).text())) * 0 + " " );
-    }
-});
+    $("#split").click(function() {
+    $('.charge').append('Charge $' + totalPrice(menuPrices($(this).text())));
+    $('.charge').text('Charge $' + (totalPrice(menuPrices)/2));
+    });
 
 // $("#remove").click(function() {
 //     if ($(this).text()) {
@@ -61,11 +60,12 @@ $("#split").click(function() {
 
 
 //remove dinner items from items div
-	$("#remove" ).click(function() {
-  	$( ".items" ).empty();
+	$("#remove").click(function() {
+      $('.charge').text('Charge $' + (totalPrice(menuPrices)*0));
+  	$( ".items").empty();
   
   	$('#nosale').text('No Sale');
-    $('.sale').css('background','#ff5959');
+    $('.sale-area').css('background','#ff5959');
 });
 
 //when mouse enter arrow display items
@@ -80,7 +80,7 @@ $("#split").click(function() {
 //when there is input of item display Current sale
 	$('.menu').click(function()	{
 	$('#nosale').text('Current Sale');
-    $('.sale').css('background','#00cc00');
+    $('.sale-area').css('background','#00cc00');
     $('#nosale').css('color','white');
 
 });
@@ -89,9 +89,29 @@ $("#split").click(function() {
         $('.dropdown-content').show();
 });
 
+    $('.takeaway').click(function() {
+    console.log('click');
+    $('.item-price').hide();
+    $('.item-name').hide();
+    });
+
 $('.charge').click(function() {
-    $('.column1').fadeOut();
-    $('.column2').fadeOut();
-    $('.column4').fadeOut();
+    $('.column1').hide();
+    $('.column2').hide();
+    $('.column3').hide();
+    $('.sale-area').css('width','855px');
+    $('#back').css('display','block');
+    // $('.dropdown').fadeOut();
 });
+$('#back').click(function() {
+    $('.column1').fadeIn();
+    $('.column2').fadeIn();
+    $('.column3').fadeIn();
+    $('.sale-area').css('width','319px');
+});
+
+$('#start-over').click(function() {
+    location.reload();
+});
+
 
