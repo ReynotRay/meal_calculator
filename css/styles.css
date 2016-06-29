@@ -28,8 +28,9 @@ img {
 
 img:hover{
 	cursor: pointer;
-    margin: .2px;
+    cursor: 20px;
 }
+
 .caption {
 	width: 125px;
     font-size: 13px;
@@ -52,14 +53,14 @@ img:hover{
 .column2{
 	margin-top: 5px;
 	width: 150px;
-	margin-left: 19px;
+	margin-left: 16px;
 	float: left;
 	
 }
 .column3 {
 	margin-top: 5px;
 	width: 150px;
-	margin-left: 19px;
+	margin-left: 16px;
 	float: left;
 	
 }
@@ -83,12 +84,19 @@ img:hover{
     margin-right: 30px;
     float: right;
 }
+.item-name{
+ margin-left: 10px;
+}
+.item-price{
+    margin-left: 10px;
+}
+
 .items p {
 	margin-left: 25px;
     line-height: 25px;
 }
 .charge {
-	height: 985x;
+	height: 87px;
     width: 319px;
     background: white;
     margin-right: 30px;
@@ -149,7 +157,14 @@ img:hover{
     overflow-y: auto;
 }
 
-
-
+.charge:hover{
+    cursor: pointer;
+}
+.final-charge{
+    //display: none;
+    background: yellow;
+    height: 100px;
+    width: 100px;
+}
 
 
