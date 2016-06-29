@@ -28,6 +28,7 @@ img {
 
 img:hover{
 	cursor: pointer;
+    margin: .2px;
 }
 .caption {
 	width: 125px;
@@ -64,20 +65,20 @@ img:hover{
 }
 
 .sale	{
-    width: 272px;
-    height: 60px;
+   width: 319px;
+    height: 70px;
     text-align: center;
    color:white;
     float: right;
     border-radius: 10px 10px 0px 0px;
-    margin-top:25px;
+    margin-top:26px;
     margin-right:30px;
     border-bottom: 1px solid grey;
     background: #ff5959;
 }
 .items{
     height: 349px;
-    width: 272px;
+    width: 319px;
     background: white;
     margin-right: 30px;
     float: right;
@@ -87,8 +88,8 @@ img:hover{
     line-height: 25px;
 }
 .charge {
-	height: 90px;
-    width: 272px;
+	height: 985x;
+    width: 319px;
     background: white;
     margin-right: 30px;
     text-align: center;
