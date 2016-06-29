@@ -5,13 +5,13 @@ body{
 
 }
 .container {
-	width:740px;
-	height: 450px;
-	margin: auto;
-	display:block;
-	margin-top: 30px;
-	border-radius: 10px;
-	background:#e6f0fa;
+    width: 914px;
+    height: 556px;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+    border-radius: 10px;
+    background: #e6f0fa;
 }
 h1{
 	text-align: center;
@@ -67,12 +67,13 @@ img:hover{
     width: 272px;
     height: 60px;
     text-align: center;
-    background: white;
+   color:white;
     float: right;
     border-radius: 10px 10px 0px 0px;
     margin-top:25px;
     margin-right:30px;
     border-bottom: 1px solid grey;
+    background: #ff5959;
 }
 .items{
     height: 260px;
@@ -96,10 +97,12 @@ img:hover{
     border-radius: 0px 0px 10px 10px;
     background:#2996cc;
     color: white;
+    font-size: 35px;
 }
 
 #nosale{
 	font-size: 21px;
+
 }
 
 .dropbtn {

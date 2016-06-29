@@ -16,7 +16,7 @@ var menuPrices = (function() {
 
     return function(item) {
         return prices[item];
-    }
+    };
 }());
 
 
@@ -25,7 +25,7 @@ var totalPrice = (function() {
     return function(price) {
         total = total + price;
         return parseFloat(total).toFixed(2);
-    }
+    };
 }());
 
 
@@ -33,7 +33,7 @@ $(".menu").click(function() {
     $('#nosale').text('Current Sale');
 
     if ($(this).text()) {
-        $('.charge').text('$' + totalPrice(menuPrices($(this).text())) + " ");
+        $('.charge').text('Charge $' + totalPrice(menuPrices($(this).text())) + " ");
         $('.items').append('<p><h4 class="item-name">' + $(this).text() + '</h4>' + '<span class="item-price">$ ' + menuPrices($(this).text()) + '</span></p>');
     }
 
@@ -44,6 +44,7 @@ $(".menu").click(function() {
   	$( ".items" ).empty();
     //(totalPrice * 0);
   	$('#nosale').text('No Sale');
+    $('.sale').css('background','#ff5959');
 
 });
 
@@ -59,6 +60,8 @@ $(".menu").click(function() {
 //when there is input of item display Current sale
 	$('.menu').click(function()	{
 	$('#nosale').text('Current Sale');
+    $('.sale').css('background','#00cc00');
+    $('#nosale').css('color','white');
 
 });
 
