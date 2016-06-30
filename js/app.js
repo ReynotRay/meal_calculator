@@ -1,3 +1,5 @@
+
+
 var menuPrices = (function() {
     var prices = {
         "Hamburger": 6.95,
@@ -86,7 +88,7 @@ $(".menu").click(function() {
 });
 //click on drop down arrow
     $('.dropdown').click(function() {
-        $('.dropdown-content').show();
+    $('.dropdown-content').show();
 });
 
     $('.takeaway').click(function() {
@@ -95,19 +97,28 @@ $(".menu").click(function() {
     $('.item-name').hide();
     });
 
+    $(".charge").one('click', function () { 
+    $(".charge").append('<input type="text" id="split-display" placeholder="Split Bill?">');  
+    $('.column1').hide();
+    $('.column2').hide();
+    $('.column3').hide();
+    $('.sale-area').css('width','855px');
+    $('#back').css('display','block');
+
+});
 $('.charge').click(function() {
     $('.column1').hide();
     $('.column2').hide();
     $('.column3').hide();
     $('.sale-area').css('width','855px');
     $('#back').css('display','block');
-    // $('.dropdown').fadeOut();
 });
 $('#back').click(function() {
     $('.column1').fadeIn();
     $('.column2').fadeIn();
     $('.column3').fadeIn();
     $('.sale-area').css('width','319px');
+    $('#split-display').hide();
 });
 
 $('#start-over').click(function() {

@@ -3,7 +3,7 @@ body{
 	// font-family: 'Lemonada', cursive;
 	font-family: sans-serif;
     //background: #f5f5dc;
-    background: #10113a;
+    background: #41438c;
 }
 .container {
     width: 914px;
@@ -13,6 +13,10 @@ body{
     margin-top: 30px;
     border-radius: 10px;
     background: #e6f0fa;
+}
+
+ul{
+    list-style: none;
 }
 h1{
 	text-align: center;
@@ -24,7 +28,7 @@ p{
 img {
     width: 125px;
     height: 91px;
-	border-radius: 5px 5px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
 	margin-top: 22px;
 	margin-left: 10px;
 	border:lightgrey solid 1px;
@@ -33,14 +37,14 @@ img {
 
 img:hover{
 	cursor: pointer;
-    cursor: 20px;
 }
 
 .caption {
 	width: 125px;
+    height: 18px;
     font-size: 13px;
     background: white;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 10px 10px;
     margin-left: 10px;
     text-align: center;
     margin-top: -5px;
@@ -50,7 +54,7 @@ img:hover{
 
 .column1{
 	margin-top: 5px;
-    margin-left: 13px;
+       padding-left: 16px;
 	width: 150px;
 	float: left;
 	
@@ -58,14 +62,14 @@ img:hover{
 .column2{
 	margin-top: 5px;
 	width: 150px;
-	margin-left: 16px;
+    padding-left: 16px;
 	float: left;
 	
 }
 .column3 {
 	margin-top: 5px;
 	width: 150px;
-	margin-left: 16px;
+	    padding-left: 16px;
 	float: left;
 	
 }
@@ -172,4 +176,9 @@ img:hover{
     display:none;
 }
 
+#split-display{
+    height: 34px;
+    font-size: 20px;
+    width: 103px;
+}
 

@@ -18,3 +18,20 @@ Print a breakdown for what each diner owes<br>
 
 Aleks
 instead of a bunch of divs create a list
+
+questions
+how do you append an item only once?
+is division correct?
+should i multiply total value by 0 for reset?
+
+why is it when you append an item there usually generate a closed one exammple with input 
+
+clearing items is working but believe value is not resseting.
+
+improvements made
+division
+multiple
+unordered list
+charge menu
+scroll through list
+drop down menu arrow with multiple options
