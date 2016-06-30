@@ -23,7 +23,7 @@ questions
 how do you append an item only once?
 is division correct?
 should i multiply total value by 0 for reset?
-
+how ot do math like tip and tax
 why is it when you append an item there usually generate a closed one exammple with input 
 
 clearing items is working but believe value is not resseting.

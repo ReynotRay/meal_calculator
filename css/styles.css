@@ -3,7 +3,7 @@ body{
 	// font-family: 'Lemonada', cursive;
 	font-family: sans-serif;
     //background: #f5f5dc;
-    background: #41438c;
+    background: #fffff0;
 }
 .container {
     width: 914px;
@@ -20,7 +20,7 @@ ul{
 }
 h1{
 	text-align: center;
-    color:white;
+    color:black;
 }
 p{
     display:inline-block;
