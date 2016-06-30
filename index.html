@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Meal tracker</title>
-	 <link href="css/normalize.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.css">
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<!--  <link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet"> -->
+    <meta charset="UTF-8">
+    <title>Meal tracker</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href=
+    "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    rel="stylesheet">
+    <!--  <link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet"> -->
 </head>
 <body>
-<h1>Meal Calculator</h1>
+    <h1>Meal Calculator</h1>
     <div class="container">
-        <ul class="column1">
-            <li class="menu" id="hamburger"><img src="assets/hamburger.jpeg"><div class="caption">Hamburger</div></li>
-            <li class="menu" id="hotdog"><img src="assets/hotdog.jpeg"><div class="caption">Hot Dog</div></li>	
-            <li class="menu" id="chickenburger"><img src="assets/chickenburger.jpg"><div class="caption">Chicken Burger</div></li>
-            <li class="menu" id="veggie"><img src="assets/veggie.jpeg"><div class="caption">Veggie Sandwich</div></li>
-        </ul>	
-        <ul class="column2">
-            <li class="menu" id="cheeseburger"><img src="assets/cheeseburger.jpeg"><div class="caption">Cheeseburger</div></li>
-            <li class="menu" id="bratwurst"><img src="assets/bratwurst.jpeg"><div class="caption">Bratwurst</div></li>	
-            <li class="menu" id="fries"><img src="assets/fries.jpeg"><div class="caption">Fries</div></li>
-            <li class="menu" id="club-wrap"><img src="assets/clubwrap.jpeg"><div class="caption">Club Wrap</div></li>
-        </ul>
-        <ul class="column3">
-            <li class="menu" id="baconburger"><img src="assets/bacon-burger.jpeg"><div class="caption">Bacon Burger</div></li>
-            <li class="menu" id="chili-dog"><img src="assets/chilidog.jpeg"><div class="caption">Chili Dog</div></li>	
-            <li class="menu" id="turkey-sandwich"><img src="assets/turkeysandwich.jpeg"><div class="caption">Turkey Sandwich</div></li>
-            <li class="menu" id="pizza"><img src="assets/pizza.jpeg"><div class="caption">Pizza</div></li>
-        </ul>
-    <div class="sale-area"><p id="nosale">No Sale</p>
-        <div class="dropdown">
-            <button class="dropbtn"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#" id="remove">Clear Items</a>
-                <a href="#" id="split">Split Bill</a>
-                <a href="#" id="back">Back</a>
-                 <a href="#" id="edit-menu">Edit Menu</a>
-                <a href="#" id="start-over">Start Over</a>
-
+        <ul class="thumbnails"></ul>
+        <div class="sale-area">
+            <p id="nosale">No Sale</p>
+            <div class="dropdown">
+                <button class="dropbtn"><i aria-hidden="true" class=
+                "fa fa-bars"></i></button>
+                <div class="dropdown-content" id="myDropdown">
+                    <ul>
+                        <li>
+                            <a href="#" id="start-over">Clear Items</a>
+                        </li>
+                        <li>
+                            <a href="#" id="back">Back</a>
+                        </li>
+                        <li>
+                            <a href="#" id="split">Split Bill</a>
+                        </li>
+                        <li>
+                            <div class="split1"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="items"></div>
+            <div class="tax">
+                tax $0.00
+            </div>
+            <div class="charge">
+                Charge $0.00
             </div>
         </div>
-        <div class="items"></div>
-
-         <div class="charge">Charge $0.00
-         <!-- <input type="text">Split Bill?</input> -->
-         </div>
     </div>
-    
-    
-</div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
-    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/jquery-3.0.0.min.js">
+    </script> 
+    <script src="js/app.js" type="text/javascript">
+    </script>
 </body>
 </html>

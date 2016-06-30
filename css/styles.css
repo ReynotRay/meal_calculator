@@ -1,13 +1,14 @@
-body{
-	background-color: white;
-	// font-family: 'Lemonada', cursive;
-	font-family: sans-serif;
+body {
+    background-color: #fff;
+    //font-family: Lemonada,cursive;
+    font-family: sans-serif;
     //background: #f5f5dc;
     background: #fffff0;
 }
+
 .container {
     width: 914px;
-    height: 556px;
+    height: 590px;
     margin: auto;
     display: block;
     margin-top: 30px;
@@ -15,170 +16,191 @@ body{
     background: #e6f0fa;
 }
 
-ul{
+.thumbnails {
+    width: 506px;
+    float: left;
+}
+
+li {
     list-style: none;
 }
-h1{
-	text-align: center;
-    color:black;
+
+.thumbnails li {
+    display: inline-block;
+    width: 158px;
 }
-p{
-    display:inline-block;
+
+h1 {
+    text-align: center;
+    color: #000;
 }
+
+p {
+    display: inline-block;
+}
+
 img {
     width: 125px;
     height: 91px;
-	border-radius: 10px 10px 0px 0px;
-	margin-top: 22px;
-	margin-left: 10px;
-	border:lightgrey solid 1px;
-	display: inline-block;
+    border-radius: 5px 5px 0 0;
+    margin-top: 22px;
+    margin-left: 10px;
+    border: #d3d3d3 solid 1px;
+    display: inline-block;
 }
 
-img:hover{
-	cursor: pointer;
+img:hover {
+    cursor: pointer;
 }
 
 .caption {
-	width: 125px;
+    width: 125px;
     height: 18px;
     font-size: 13px;
-    background: white;
-    border-radius: 0px 0px 10px 10px;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
     margin-left: 10px;
     text-align: center;
     margin-top: -5px;
-    border: lightgrey solid 1px;
-    box-shadow: 3px 3px 5px #888888;
+    border: #d3d3d3 solid 1px;
+    box-shadow: 3px 3px 5px #888;
 }
 
-.column1{
-	margin-top: 5px;
-       padding-left: 16px;
-	width: 150px;
-	float: left;
-	
-}
-.column2{
-	margin-top: 5px;
-	width: 150px;
-    padding-left: 16px;
-	float: left;
-	
-}
-.column3 {
-	margin-top: 5px;
-	width: 150px;
-	    padding-left: 16px;
-	float: left;
-	
+.column1 {
+    float: left;
+    width: 530px;
 }
 
-.sale-area	{
+.sale-area {
     width: 319px;
     height: 70px;
     text-align: center;
-   color:white;
+    color: #fff;
     float: right;
-    border-radius: 10px 10px 0px 0px;
-    margin-top:26px;
-    margin-right:30px;
+    border-radius: 10px 10px 0 0;
+    margin-top: 26px;
+    margin-right: 30px;
     border-bottom: 1px solid grey;
     background: #ff5959;
 }
-.items{
+
+.items {
     height: 354px;
-    background: white;
-    color: black;
+    background: #fff;
+    color: #000;
 }
-#takeaway{
+
+#takeaway {
     display: none;
 }
-.item-name{
- margin-left: 10px;
+
+.item-name {
+    margin-left: 10px;
 }
-.item-price{
+
+.item-price {
     margin-left: 10px;
 }
 
 .items p {
-	margin-left: 25px;
+    text-align: center;
     line-height: 25px;
-    width: 233px;
+    display: block;
 }
+
+
 .charge {
-	height: 87px;
-    background: white;
+    height: 87px;
     text-align: center;
     line-height: 84px;
-    border-radius: 0px 0px 10px 10px;
-    background:#2996cc;
-    color: white;
-    font-size: 35px;
+    border-radius: 0 0 10px 10px;
+    background: #2996cc;
+    color: #fff;
+    font-size: 25px;
 }
 
-#nosale{
-	font-size: 21px;
-
+#nosale {
+    font-size: 21px;
 }
 
 .dropbtn {
-    color: lightgrey;
+    color: #fff;
     background-color: transparent;
-    font-size: 35px;
+    font-size: 28px;
     position: absolute;
     cursor: pointer;
     margin-top: -28px;
     border-color: transparent;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-    color:black;
+.dropbtn:hover,.dropbtn:focus {
+    color: #000;
     cursor: pointer;
 }
 
 .dropdown {
     display: inline-block;
-}
 
+}
+.dropdown-content ul {
+    padding: 0; 
+}
 .dropdown-content {
+   
     display: none;
     margin-left: -26px;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
-    color: black;
+    color: #000;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {background-color: lightgrey}
+.dropdown-content a:hover {
+    background-color: #d3d3d3;
+}
 
-.items{
+.items {
     overflow-y: auto;
 }
 
-.charge:hover{
+.charge:hover {
     cursor: pointer;
 }
-.final-charge{
 
-    background: yellow;
+.final-charge {
+    background: #ff0;
     height: 100px;
     width: 100px;
 }
-#back{
-    display:none;
+
+#back {
+    display: none;
 }
 
-#split-display{
+.tax {
+    color: #000;
+    height: 40px;
+    line-height: 40px;
+    background-color: #cad3d8;
+}
+
+#split-display {
     height: 34px;
-    font-size: 20px;
-    width: 103px;
+    font-size: 14px;
+    width: 98px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
+.split1 {
+    display: none;
+    color: #000;
+}
