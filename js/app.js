@@ -31,8 +31,6 @@ var totalPrice = (function() {
     };
 }());
 
-//console.logp(rice);
-
 $(".menu").click(function() {
     $('#nosale').text('Current Sale');
 
@@ -42,7 +40,7 @@ $(".menu").click(function() {
             '<span class="item-price">$'+ menuPrices($(this).text()) + '<div id="takeaway">Xhere');
     }
 });
-
+    //split dinner into 2
     $("#split").click(function() {
     $('.charge').append('Charge $' + totalPrice(menuPrices($(this).text())));
     $('.charge').text('Charge $' + (totalPrice(menuPrices)/2));

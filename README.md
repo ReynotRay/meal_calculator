@@ -20,7 +20,9 @@ Aleks
 instead of a bunch of divs create a list
 
 questions
-how do you append an item only once?
+lots of jquery 
+should i create a separate file for jquery functions?
+
 is division correct?
 should i multiply total value by 0 for reset?
 how ot do math like tip and tax
