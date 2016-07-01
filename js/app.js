@@ -63,8 +63,6 @@
         }
     });
 
-   
-    
     //remove dinner items from items div
     $("#remove").click(function() {
         $('.charge').text('Charge $' + (totalPrice(menuPrices) * 0));
@@ -76,6 +74,7 @@
     $(".dropdown").mouseenter(function() {
         $('.dropdown-content').fadeIn();
     });
+    //leave dropdown to close content
     $(".dropdown").mouseleave(function() {
         $('.dropdown-content').fadeOut();
     });
@@ -89,32 +88,26 @@
     $('.dropdown').click(function() {
         $('.dropdown-content').show();
     });
-    $('.takeaway').click(function() {
-        console.log('click');
-        $('.item-price').hide();
-        $('.item-name').hide();
-    });
-    $(".charge").one('click', function() {
-        $('.thumbnails').hide();
-        $('.sale-area').css('width', '855px');
-        $('#back').css('display', 'block');
-    });
+    //when you click on charge thumbnails disappear
     $('.charge').click(function() {
         $('.thumbnails').hide();
         $('.sale-area').css('width', '855px');
         $('#back').css('display', 'block');
     });
+    //click on back will retreat to main screen
     $('#back').click(function() {
         $('.thumbnails').fadeIn();
         $('.sale-area').css('width', '319px');
     });
+    //when mouse enters split bill question of how many will pop up
     $('#split').mouseenter(function() {
         $(".split1").show();
     });
+    //click on clear items and will reload page
     $('#start-over').click(function() {
         location.reload();
     });
-
+    //function to split bill
     function divideBetweenMembers(number) {
         return totalPrice(0) / number;
             }
@@ -125,7 +118,7 @@
             $('.charge').text('$' + " " + (Math.round(divideBetweenMembers($(this).val())*100)/100) + " " + 'per person');
         }
     });
-
+    //function add tax
     function addTax() {
         return totalPrice(0) * .0825;
     }
@@ -133,6 +126,7 @@
         console.log(Math.round(addTax($(this).val())*100)/100);
         $('.tax').text('tax' + ' ' + '$' + (Math.round(addTax($(this).val())*100)/100));
     });
+    //function to add tip
     function addTip() {
         return totalPrice(0) * .15;
     }

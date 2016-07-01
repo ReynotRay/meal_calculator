@@ -1,17 +1,17 @@
 Meal Calculator 
 
-improvements made
-html refactored 
-js refactored
-adding tax
-adding tax to final amount
-splitting meal depending on party
+improvements made<br>
+html refactored <br>
+js refactored<br>
+adding tax<br>
+adding tax to final amount<br>
+splitting meal depending on party<br>
 
 
-questions
-console.log
-cant organize functions together
-question on last assignment
-better method of rounding tto two decimal places
+questions<br>
+console.log<br>
+cant organize functions together<br>
+question on last assignment<br>
+better method of rounding tto two decimal places<br>
 
 
