@@ -103,9 +103,9 @@ img:hover {
 }
 
 .items p {
-    text-align: center;
+text-align: center;
     line-height: 25px;
-    display: block;
+    width: 200px;
 }
 
 

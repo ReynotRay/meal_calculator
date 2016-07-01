@@ -39,26 +39,3 @@ scroll through list
 drop down menu arrow with multiple options
 
 
-
-    // var totalPrice = (function() {
-    //     var total = 0;
-    //     return function(price) {
-    //         total = total + price;
-    //         return parseFloat(total).toFixed(2);
-    //     };
-    // }());
-
-
-
-
-
-    works     
-    var totalPrice = (function() {
-        var total = 0;
-        return function(price) {
-            taxed = .0825;
-            subtotal = price * taxed;
-            total = price + subtotal; 
-            return parseFloat(total).toFixed(2);
-        };
-    }());
