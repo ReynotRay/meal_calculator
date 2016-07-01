@@ -18,36 +18,42 @@
             return prices[item];
         };
     }());
+    //establish images variable
     var images = ['hamburger', 'hotdog', 'chickenburger', 'veggie',
         'cheeseburger', 'bratwurst', 'fries', 'clubwrap', 'bacon-burger',
         'chilidog', 'turkeysandwich', 'pizza'
     ];
+    //establist var ext for jpeg image & categories for loop
     var ext = '.jpeg';
     var categories = ["Hamburger", "Hot Dog", "Chicken Burger",
         "Veggie Sandwich", "Cheeseburger", "Bratwurst", "Fries",
         "Club Wrap", "Bacon Burger", "Chili Dog", "Turkey Sandwich",
         "Pizza"
     ];
-
+    //function loop to generate thumbnails
     function generateItems() {
         for (var i = 0; i < images.length; i++) {
             $('.thumbnails').append('<li><img src="assets/' + images[i] +  ext + '"><div class ="caption">' + categories[i] + '</span></li>');
         }
     }
-    generateItems();
-    console.log('fucks');
+  generateItems();
+    //append dynamically input text for split bill
+    $(".split1").append('<input type="text" id="split-display" placeholder="How Many?">');
+    //establihs variables to obtain total price with tax 
     var totalPrice = (function() {
         var total = 0;
         return function(price) {
             taxed = .0825;
+            tip = .2;
             subtotal = price * taxed;
-            total = total + price + subtotal; 
+            subtotal1= price * tip;
+            total = total + price + subtotal + subtotal1; 
             return parseFloat(total).toFixed(2);
         };
     }());
+    //when thumnnails are clicked     
     $(".thumbnails li").click(function() {
         $('#nosale').text('Current Sale');
-        console.log("click");
         if ($(this).text()) {
             $('.charge').text('Charge $' + totalPrice(menuPrices($(this)
                 .text())) + " ");
@@ -56,6 +62,9 @@
             );
         }
     });
+
+   
+    
     //remove dinner items from items div
     $("#remove").click(function() {
         $('.charge').text('Charge $' + (totalPrice(menuPrices) * 0));
@@ -105,12 +114,9 @@
     $('#start-over').click(function() {
         location.reload();
     });
-    $(".split1").append(
-        '<input type="text" id="split-display" placeholder="How Many?">');
 
     function divideBetweenMembers(number) {
         return totalPrice(0) / number;
-        // return parseFloat(total).toFixed(2);
             }
     $('#split-display').keydown(function(e) {
         console.log('cooool');
@@ -122,14 +128,18 @@
 
     function addTax() {
         return totalPrice(0) * .0825;
-        return 
     }
     $('.thumbnails').click(function() {
         console.log(Math.round(addTax($(this).val())*100)/100);
         $('.tax').text('tax' + ' ' + '$' + (Math.round(addTax($(this).val())*100)/100));
     });
-
-
+    function addTip() {
+        return totalPrice(0) * .15;
+    }
+    $('.thumbnails').click(function() {
+        console.log(Math.round(addTip($(this).val())*100)/100);
+        $('.tip').text('gratuity 15% ' + ' ' + '$' + (Math.round(addTip($(this).val())*100)/100));
+    });
 
 
 

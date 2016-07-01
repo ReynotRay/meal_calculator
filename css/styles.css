@@ -11,7 +11,7 @@ body {
     height: 590px;
     margin: auto;
     display: block;
-    margin-top: 30px;
+    margin-top: 20px;
     border-radius: 10px;
     background: #e6f0fa;
 }
@@ -33,6 +33,7 @@ li {
 h1 {
     text-align: center;
     color: #000;
+    font-family: fantasy;
 }
 
 p {
@@ -42,7 +43,7 @@ p {
 img {
     width: 125px;
     height: 91px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 3px 3px 0 0;
     margin-top: 22px;
     margin-left: 10px;
     border: #d3d3d3 solid 1px;
@@ -51,6 +52,7 @@ img {
 
 img:hover {
     cursor: pointer;
+    border: black solid 1px;
 }
 
 .caption {
@@ -58,7 +60,7 @@ img:hover {
     height: 18px;
     font-size: 13px;
     background: #fff;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 3px 3px;
     margin-left: 10px;
     text-align: center;
     margin-top: -5px;
@@ -66,10 +68,6 @@ img:hover {
     box-shadow: 3px 3px 5px #888;
 }
 
-.column1 {
-    float: left;
-    width: 530px;
-}
 
 .sale-area {
     width: 319px;
@@ -77,21 +75,18 @@ img:hover {
     text-align: center;
     color: #fff;
     float: right;
-    border-radius: 10px 10px 0 0;
-    margin-top: 26px;
+    border-radius: 3px 3px 0 0;
+    margin-top: 40px;
     margin-right: 30px;
     border-bottom: 1px solid grey;
     background: #ff5959;
 }
 
 .items {
-    height: 354px;
+    height: 313px;
     background: #fff;
     color: #000;
-}
-
-#takeaway {
-    display: none;
+    overflow-y: auto;
 }
 
 .item-name {
@@ -103,17 +98,17 @@ img:hover {
 }
 
 .items p {
-text-align: center;
+    text-align: center;
     line-height: 25px;
     width: 200px;
 }
 
 
 .charge {
-    height: 87px;
+    height: 70px;
     text-align: center;
-    line-height: 84px;
-    border-radius: 0 0 10px 10px;
+    line-height: 70px;
+    border-radius: 0 0 3px 3px;
     background: #2996cc;
     color: #fff;
     font-size: 25px;
@@ -146,9 +141,8 @@ text-align: center;
     padding: 0; 
 }
 .dropdown-content {
-   
+    margin-top: 10px;
     display: none;
-    margin-left: -26px;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 120px;
@@ -166,10 +160,6 @@ text-align: center;
     background-color: #d3d3d3;
 }
 
-.items {
-    overflow-y: auto;
-}
-
 .charge:hover {
     cursor: pointer;
 }
@@ -184,10 +174,10 @@ text-align: center;
     display: none;
 }
 
-.tax {
+.tax,.tip {
     color: #000;
-    height: 40px;
-    line-height: 40px;
+    height: 30px;
+    line-height: 30px;
     background-color: #cad3d8;
 }
 
@@ -203,4 +193,11 @@ text-align: center;
 .split1 {
     display: none;
     color: #000;
+}
+
+.footer{
+    text-align: center;
+    margin-top: 20px;
+    
+    
 }
