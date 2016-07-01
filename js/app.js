@@ -39,7 +39,9 @@
     var totalPrice = (function() {
         var total = 0;
         return function(price) {
-            total = total + price;
+            taxed = .0825;
+            subtotal = price * taxed;
+            total = total + price + subtotal; 
             return parseFloat(total).toFixed(2);
         };
     }());
@@ -65,9 +67,9 @@
     $(".dropdown").mouseenter(function() {
         $('.dropdown-content').fadeIn();
     });
-    // $(".dropdown").mouseleave(function() {
-    //     $('.dropdown-content').fadeOut();
-    // });
+    $(".dropdown").mouseleave(function() {
+        $('.dropdown-content').fadeOut();
+    });
     //when there is input of item display Current sale
     $('.thumbnails li').click(function() {
         $('#nosale').text('Current Sale');
@@ -109,14 +111,12 @@
     function divideBetweenMembers(number) {
         return totalPrice(0) / number;
         // return parseFloat(total).toFixed(2);
-    }
+            }
     $('#split-display').keydown(function(e) {
         console.log('cooool');
         if (e.which === 13) {
-            console.log(divideBetweenMembers($(this).val()));
-            $('.charge').text('$' + " " + divideBetweenMembers($(this).val()) +
-                " " + 'per person');
-            // $('.charge').text('each party will party will pay');
+            console.log(Math.round(divideBetweenMembers($(this).val())*100)/100);
+            $('.charge').text('$' + " " + (Math.round(divideBetweenMembers($(this).val())*100)/100) + " " + 'per person');
         }
     });
 
@@ -125,12 +125,13 @@
         return 
     }
     $('.thumbnails').click(function() {
-        $('.tax').text('tax' + ' ' + '$' + addTax($(this).val()));
+        console.log(Math.round(addTax($(this).val())*100)/100);
+        $('.tax').text('tax' + ' ' + '$' + (Math.round(addTax($(this).val())*100)/100));
     });
-    // var totalPrice = (function() {
-    //     var total = 0;
-    //     return function(price) {
-    //         total = total + price;
-    //         return parseFloat(total).toFixed(2);
-    //     };
-    // }());
+
+
+
+
+
+
+

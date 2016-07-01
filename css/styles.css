@@ -142,7 +142,7 @@ img:hover {
     display: inline-block;
 
 }
-.dropdown-content ul {
+.dropdown-content{
     padding: 0; 
 }
 .dropdown-content {

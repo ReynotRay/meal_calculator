@@ -16,7 +16,7 @@ Print out a total bill<br>
 Print a breakdown for what each diner owes<br>
 
 
-Aleks
+Aleks request
 instead of a bunch of divs create a list
 
 questions
@@ -37,3 +37,28 @@ unordered list
 charge menu
 scroll through list
 drop down menu arrow with multiple options
+
+
+
+    // var totalPrice = (function() {
+    //     var total = 0;
+    //     return function(price) {
+    //         total = total + price;
+    //         return parseFloat(total).toFixed(2);
+    //     };
+    // }());
+
+
+
+
+
+    works     
+    var totalPrice = (function() {
+        var total = 0;
+        return function(price) {
+            taxed = .0825;
+            subtotal = price * taxed;
+            total = price + subtotal; 
+            return parseFloat(total).toFixed(2);
+        };
+    }());
