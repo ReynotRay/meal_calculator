@@ -97,7 +97,7 @@
     //when there is input of item display Current sale
     $('.thumbnails li').click(function() {
         nosale.text('Current Sale');
-        $('.sale-area').css('background', '#00cc00');
+        saleArea.css('background', '#00cc00');
         nosale.css('color', 'white');
     });
     //click on drop down arrow
