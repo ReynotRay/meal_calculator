@@ -52,7 +52,7 @@ img {
 
 img:hover {
     cursor: pointer;
-    border: black solid 1px;
+    border: black solid 2px;
 }
 
 .caption {
