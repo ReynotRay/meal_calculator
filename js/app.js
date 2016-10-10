@@ -1,18 +1,4 @@
-'use strict'
-
-    var charge = $('.charge');
-    var nosale = $('#nosale');
-    var dropDown = $('.dropdown');
-    var split = $("#split");
-    var subSplit = $("#sub-split");
-    var saleArea= $('.sale-area');
-    var dropDownContent = $('.dropdown-content');
-    var tip = $('.tip');
-    var back = $('#back');
-    var thumbnails = $('.thumbnails');
-
-
-    var menuPrices = (function() {
+var menuPrices = (function() {
         var prices = {
             "Hamburger": 6.95,
             "Hot Dog": 2.95,
@@ -51,27 +37,24 @@
     }
   generateItems();
     //append dynamically input text for split bill
-    subSplit.append('<input type="text" id="split-display" placeholder="How Many?">');
+    $(".split1").append('<input type="text" id="split-display" placeholder="How Many?">');
     //establihs variables to obtain total price with tax 
-    
-
     var totalPrice = (function() {
         var total = 0;
-        var taxed = .0825;
-          var tip = .2;
-
         return function(price) {
-            var subtotal = price * taxed;
-            var subtotal1= price * tip;
+            taxed = .0825;
+            tip = .2;
+            subtotal = price * taxed;
+            subtotal1= price * tip;
             total = total + price + subtotal + subtotal1; 
             return parseFloat(total).toFixed(2);
         };
     }());
     //when thumnnails are clicked     
     $(".thumbnails li").click(function() {
-    nosale.text('Current Sale');
+        $('#nosale').text('Current Sale');
         if ($(this).text()) {
-            charge.text('Charge $' + totalPrice(menuPrices($(this)
+            $('.charge').text('Charge $' + totalPrice(menuPrices($(this)
                 .text())) + " ");
             $('.items').append('<p class="item-name">' + $(this).text() +
                 '<span class="item-price">$' + menuPrices($(this).text())
@@ -81,71 +64,63 @@
 
     //remove dinner items from items div
     $("#remove").click(function() {
-        charge.text('Charge $' + (totalPrice(menuPrices) * 0));
+        $('.charge').text('Charge $' + (totalPrice(menuPrices) * 0));
         $(".items").empty();
-        nosale.text('No Sale');
-        saleArea.css('background', '#ff5959');
+        $('#nosale').text('No Sale');
+        $('.sale-area').css('background', '#ff5959');
     });
     //when mouse enter arrow display items
-    dropDown.mouseenter(function() {
-        dropDownContent.fadeIn();
+    $(".dropdown").mouseenter(function() {
+        $('.dropdown-content').fadeIn();
     });
     //leave dropdown to close content
-    dropDown.mouseleave(function() {
+    $(".dropdown").mouseleave(function() {
         $('.dropdown-content').fadeOut();
     });
     //when there is input of item display Current sale
     $('.thumbnails li').click(function() {
-        nosale.text('Current Sale');
-        saleArea.css('background', '#00cc00');
-        nosale.css('color', 'white');
+        $('#nosale').text('Current Sale');
+        $('.sale-area').css('background', '#00cc00');
+        $('#nosale').css('color', 'white');
     });
     //click on drop down arrow
-    dropDown.click(function() {
+    $('.dropdown').click(function() {
         $('.dropdown-content').show();
     });
     //when you click on charge thumbnails disappear
-    charge.click(function() {
-        thumbnails.hide();
-        saleArea.css('width', '855px');
-        back.css('display', 'block');
+    $('.charge').click(function() {
+        $('.thumbnails').hide();
+        $('.sale-area').css('width', '855px');
+        $('#back').css('display', 'block');
     });
     //click on back will retreat to main screen
-    back.click(function() {
-        thumbnails.fadeIn();
-        saleArea.css('width', '319px');
-        });
+    $('#back').click(function() {
+        $('.thumbnails').fadeIn();
+        $('.sale-area').css('width', '319px');
+    });
     //when mouse enters split bill question of how many will pop up
-    split.mouseenter(function() {
-        subSplit.show();
-        });
+    $('#split').mouseenter(function() {
+        $(".split1").show();
+    });
     //click on clear items and will reload page
     $('#start-over').click(function() {
         location.reload();
-        });
-
-
-
+    });
     //function to split bill
     function divideBetweenMembers(number) {
         return totalPrice(0) / number;
             }
-            //work on function for with parameter selector, mathValue
-        // function calc(selector, mathValue){
-        //     $(selector).text('$' + " " + (Math.round((mathValue)*100)/100) + " " + 'per person');
-        //     }
-
     $('#split-display').keydown(function(e) {
         if (e.which === 13) {
             console.log(Math.round(divideBetweenMembers($(this).val())*100)/100);
-            charge.text('$' + " " + (Math.round(divideBetweenMembers($(this).val())*100)/100) + " " + 'per person');
+            $('.charge').text('$' + " " + (Math.round(divideBetweenMembers($(this).val())*100)/100) + " " + 'per person');
         }
     });
     //function add tax
     function addTax() {
         return totalPrice(0) * .0825;
     }
-    thumbnails.click(function() {
+    $('.thumbnails').click(function() {
         console.log(Math.round(addTax($(this).val())*100)/100);
         $('.tax').text('tax' + ' ' + '$' + (Math.round(addTax($(this).val())*100)/100));
     });
@@ -153,12 +128,9 @@
     function addTip() {
         return totalPrice(0) * .15;
     }
-    thumbnails.click(function() {
+    $('.thumbnails').click(function() {
         console.log(Math.round(addTip($(this).val())*100)/100);
-        tip.text('gratuity 15% ' + ' ' + '$' + (Math.round(addTip($(this).val())*100)/100));
+        $('.tip').text('gratuity 15% ' + ' ' + '$' + (Math.round(addTip($(this).val())*100)/100));
     });
-
-
-
 
 
